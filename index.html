@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubham Patel | Premium Cinematic Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cinematic Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <h1 class="cinematic-logo-loader">SHUBHAM</h1>
+            <div class="loader-bar-container">
+                <div class="loader-bar"></div>
+            </div>
+            <p class="loader-text">CRITICALLY ACCLAIMED PORTFOLIO</p>
+        </div>
+    </div>
+
+    <!-- Cinematic Audio Ambient Synth -->
+    <div class="ambient-audio-container">
+        <button id="sound-toggle" class="sound-btn" title="Toggle Epic Cinematic Sound">
+            <i class="fas fa-volume-mute"></i>
+            <span class="sound-tooltip">Enable Epic Ambient Sound</span>
+        </button>
+    </div>
+
+    <!-- Netflix-Style Navigation Bar -->
+    <header class="navbar">
+        <div class="navbar-left">
+            <a href="#" class="logo">SHUBHAM</a>
+            <nav class="nav-links">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+        <div class="navbar-right">
+            <div class="nav-search">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" placeholder="Titles, skills, genres..." class="search-input">
+            </div>
+            <div class="nav-icon notification-bell">
+                <i class="fas fa-bell"></i>
+                <span class="notification-badge">1</span>
+                <div class="notification-dropdown">
+                    <p>New Feature Released: Interactive Code Showreel is now playing!</p>
+                </div>
+            </div>
+            <div class="profile-avatar">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Shubham Patel Profile" class="avatar-img">
+                <div class="profile-dropdown">
+                    <ul>
+                        <li><a href="#about"><i class="fas fa-user"></i> Shubham's Profile</a></li>
+                        <li><a href="#portfolio"><i class="fas fa-th-list"></i> My List (Projects)</a></li>
+                        <li><a href="#contact"><i class="fas fa-envelope"></i> Hire Cast</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="mobile-menu">
+        <div class="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <a href="#hero" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#portfolio" class="mobile-link">Portfolio</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <!-- Main Container -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <canvas id="hero-canvas" class="hero-canvas"></canvas>
+            <div class="hero-vignette"></div>
+            <div class="hero-bottom-glow"></div>
+            
+            <div class="hero-content">
+                <div class="hero-badge-row">
+                    <span class="hero-badge red-badge">ORIGINAL</span>
+                    <span class="hero-rating"><i class="fas fa-star text-gold"></i> 9.9 IMDb</span>
+                </div>
+                
+                <h1 class="hero-title">SHUBHAM PATEL</h1>
+                
+                <div class="typing-container">
+                    <span class="typing-prefix">A PREMIUM SEASON OF </span>
+                    <span id="typed-text" class="typed-text"></span>
+                    <span class="cursor">&nbsp;</span>
+                </div>
+
+                <p class="hero-description">
+                    Directing high-performance digital experiences. Specializing in cutting-edge frontend architecture, full-stack pipelines, and visually stunning interactive solutions designed to scale. Rated 'E' for Excellent, now streaming globally.
+                </p>
+
+                <div class="hero-meta-info">
+                    <span class="meta-match">99% Match</span>
+                    <span class="meta-year">2026</span>
+                    <span class="meta-certification">PG-13</span>
+                    <span class="meta-duration">5+ Years Exp</span>
+                    <span class="meta-quality">Ultra HD 4K</span>
+                    <span class="meta-audio">5.1 Audio</span>
+                </div>
+
+                <div class="hero-buttons">
+                    <button id="play-btn" class="btn btn-primary">
+                        <i class="fas fa-play"></i> Play Showreel
+                    </button>
+                    <button id="info-btn" class="btn btn-secondary">
+                        <i class="fas fa-info-circle"></i> More Info
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section (Netflix Details Layout) -->
+        <section id="about" class="about-section scroll-reveal">
+            <div class="section-container">
+                <div class="section-header-cinematic">
+                    <span class="cinematic-category">THE BACKSTORY</span>
+                    <h2 class="section-title">Overview & Biography</h2>
+                    <div class="gold-accent-line"></div>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Column 1: Cinematic Description -->
+                    <div class="about-left">
+                        <p class="about-bio-lead">
+                            "An extraordinary journey of turning complex system logic into elegant digital art."
+                        </p>
+                        <p class="about-bio-text">
+                            Shubham Patel is a seasoned Full-Stack Engineer and Creative Technologist who directs and shapes modern web architectures. With a sharp eye for microscopic design details and an uncompromising passion for clean, robust backend pipelines, Shubham designs software that operates at peak performance, ensuring cinematic visual rendering alongside bulletproof business logic.
+                        </p>
+                        <p class="about-bio-text">
+                            Whether architecting reactive web systems with React and TypeScript, engineering scalable REST/GraphQL endpoints via Node.js and Python, or fine-tuning cloud deployment frameworks, Shubham handles every project with the rigor of a blockbuster director crafting an Oscar-winning masterpiece.
+                        </p>
+
+                        <!-- Netflix Style Stats Grid -->
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <span class="stat-number">5+</span>
+                                <span class="stat-label">Years of Directing Code</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">40+</span>
+                                <span class="stat-label">Production Releases</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">99%</span>
+                                <span class="stat-label">Client Approval Match</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Metadata Panel (Netflix sidebar style) -->
+                    <div class="about-right">
+                        <div class="cinematic-sidebar">
+                            <div class="sidebar-portrait-container">
+                                <div class="portrait-glow"></div>
+                                <div class="sidebar-portrait">
+                                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="portrait-svg">
+                                        <defs>
+                                            <radialGradient id="gold-grad" cx="50%" cy="50%" r="50%" fx="30%" fy="30%">
+                                                <stop offset="0%" stop-color="#FFE259" />
+                                                <stop offset="100%" stop-color="#FFA751" />
+                                            </radialGradient>
+                                            <linearGradient id="dark-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" stop-color="#141414" />
+                                                <stop offset="100%" stop-color="#000" />
+                                            </linearGradient>
+                                        </defs>
+                                        <!-- Cinematic background -->
+                                        <rect width="200" height="200" rx="12" fill="url(#dark-bg)" />
+                                        <!-- Gold particle ring -->
+                                        <circle cx="100" cy="95" r="55" fill="none" stroke="url(#gold-grad)" stroke-width="2" stroke-dasharray="10, 5" opacity="0.6">
+                                            <animateTransform attributeName="transform" type="rotate" from="0 100 95" to="360 100 95" dur="20s" repeatCount="indefinite" />
+                                        </circle>
+                                        <!-- Code block background styling overlay -->
+                                        <text x="30" y="55" fill="#FFE259" font-family="monospace" font-size="10" opacity="0.15">&lt;code&gt;</text>
+                                        <text x="135" y="150" fill="#FFE259" font-family="monospace" font-size="10" opacity="0.15">&lt;/code&gt;</text>
+                                        <text x="30" y="150" fill="#FFE259" font-family="monospace" font-size="8" opacity="0.2">const shubham = new Expert();</text>
+                                        <!-- Cinematic stylized portrait icon -->
+                                        <path d="M100,50 C80,50 70,65 70,85 C70,105 82,115 100,115 C118,115 130,105 130,85 C130,65 120,50 100,50 Z" fill="url(#gold-grad)" />
+                                        <path d="M60,155 C60,128 80,125 100,125 C120,125 140,128 140,155 C140,160 135,165 100,165 C65,165 60,160 60,155 Z" fill="url(#gold-grad)" opacity="0.8" />
+                                        <!-- Glowing gold details -->
+                                        <circle cx="100" cy="85" r="3" fill="#ffffff" />
+                                        <circle cx="92" cy="83" r="1" fill="#ffffff" />
+                                        <circle cx="108" cy="83" r="1" fill="#ffffff" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="metadata-list">
+                                <div class="meta-item">
+                                    <span class="meta-label">Cast:</span>
+                                    <span class="meta-val">Shubham Patel (Lead Developer, Architect, Innovator)</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Director:</span>
+                                    <span class="meta-val">Passion & Innovation</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Genres:</span>
+                                    <span class="meta-val">Scalable Web Apps, Creative Motion UI, Microservices, Interactive Systems</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">This Show is:</span>
+                                    <span class="meta-val">Immersive, Highly Responsive, Visually Striking, Cleanly Engineered</span>
+                                </div>
+                                <div class="meta-item-box">
+                                    <div class="ranking-badge">
+                                        <span class="rank-num">#1</span>
+                                        <span class="rank-text">TRENDING IN INNOVATION</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section (Netflix Row of Categories with interactive Ep. Progress) -->
+        <section id="skills" class="skills-section scroll-reveal">
+            <div class="section-container">
+                <div class="section-header-cinematic">
+                    <span class="cinematic-category">THE PRODUCTION ARSENAL</span>
+                    <h2 class="section-title">Skills & Expertise</h2>
+                    <div class="gold-accent-line"></div>
+                </div>
+
+                <!-- Netflix Style Row Categories Tabs -->
+                <div class="category-tabs">
+                    <button class="tab-btn active" data-tab="all">All Genres</button>
+                    <button class="tab-btn" data-tab="frontend">Frontend Architecture</button>
+                    <button class="tab-btn" data-tab="backend">Backend Direction</button>
+                    <button class="tab-btn" data-tab="creative">Creative & DevOps</button>
+                </div>
+
+                <!-- Grid of Skills cards -->
+                <div class="skills-grid">
+                    <!-- Frontend Skills -->
+                    <div class="skill-card-cinematic" data-genre="frontend">
+                        <div class="skill-banner-placeholder fg-1">
+                            <i class="fab fa-react skill-banner-icon"></i>
+                            <div class="skill-level-overlay">EPISODE 01</div>
+                        </div>
+                        <div class="skill-info">
+                            <div class="skill-header">
+                                <h3 class="skill-name">React / Next.js / TypeScript</h3>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <p class="skill-desc">Directing beautiful modern user interfaces with advanced hooks, robust state management (Redux, Zustand), and SSR architectures.</p>
+                            <div class="episode-progress-bar">
+                                <div class="episode-progress" style="width: 95%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card-cinematic" data-genre="frontend">
+                        <div class="skill-banner-placeholder fg-2">
+                            <i class="fab fa-css3-alt skill-banner-icon"></i>
+                            <div class="skill-level-overlay">EPISODE 02</div>
+                        </div>
+                        <div class="skill-info">
+                            <div class="skill-header">
+                                <h3 class="skill-name">Advanced CSS / Tailwind / Motion</h3>
+                                <span class="skill-percentage">98%</span>
+                            </div>
+                            <p class="skill-desc">Formulating state-of-the-art animations, cinematic CSS variables, responsive frameworks, grid architectures, and fluid layouts.</p>
+                            <div class="episode-progress-bar">
+                                <div class="episode-progress" style="width: 98%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend Skills -->
+                    <div class="skill-card-cinematic" data-genre="backend">
+                        <div class="skill-banner-placeholder bg-1">
+                            <i class="fab fa-node-js skill-banner-icon"></i>
+                            <div class="skill-level-overlay">EPISODE 03</div>
+                        </div>
+                        <div class="skill-info">
+                            <div class="skill-header">
+                                <h3 class="skill-name">Node.js / Express / REST APIs</h3>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <p class="skill-desc">Orchestrating microservices, designing highly secure scalable API routes, managing middleware, streams, and parallel computations.</p>
+                            <div class="episode-progress-bar">
+                                <div class="episode-progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card-cinematic" data-genre="backend">
+                        <div class="skill-banner-placeholder bg-2">
+                            <i class="fab fa-python skill-banner-icon"></i>
+                            <div class="skill-level-overlay">EPISODE 04</div>
+                        </div>
+                        <div class="skill-info">
+                            <div class="skill-header">
+                                <h3 class="skill-name">Python / FastAPI / Django</h3>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <p class="skill-desc">Handling backend scripting, complex machine learning integrations, and ultra-fast asynchronous processing services.</p>
+                            <div class="episode-progress-bar">
+                                <div class="episode-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card-cinematic" data-genre="backend">
+                        <div class="skill-banner-placeholder bg-3">
+                            <i class="fas fa-database skill-banner-icon"></i>
+                            <div class="skill-level-overlay">EPISODE 05</div>
+                        </div>
+                        <div class="skill-info">
+                            <div class="skill-header">
+                                <h3 class="skill-name">PostgreSQL / MongoDB / Redis</h3>
+                                <span class="skill-percentage">92%</span>
+                            </div>
+                            <p class="skill-desc">Database modeling, performance tuning, advanced query optimizations, index layouts, and key-value cache layer setups.</p>
+                            <div class="episode-progress-bar">
+                                <div class="episode-progress" style="width: 92%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Creative / DevOps Skills -->
+                    <div class="skill-card-cinematic" data-genre="creative">
+                        <div class="skill-banner-placeholder cr-1">
+                            <i class="fab fa-docker skill-banner-icon"></i>
+                            <div class="skill-level-overlay">EPISODE 06</div>
+                        </div>
+                        <div class="skill-info">
+                            <div class="skill-header">
+                                <h3 class="skill-name">Docker / AWS / DevOps</h3>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <p class="skill-desc">Containerizing environments, continuous integration / deployment pipelines, and managing high-availability AWS nodes.</p>
+                            <div class="episode-progress-bar">
+                                <div class="episode-progress" style="width: 88%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card-cinematic" data-genre="creative">
+                        <div class="skill-banner-placeholder cr-2">
+                            <i class="fas fa-palette skill-banner-icon"></i>
+                            <div class="skill-level-overlay">EPISODE 07</div>
+                        </div>
+                        <div class="skill-info">
+                            <div class="skill-header">
+                                <h3 class="skill-name">UI & UX / Figma / Motion Design</h3>
+                                <span class="skill-percentage">94%</span>
+                            </div>
+                            <p class="skill-desc">Curating immersive user journeys, detailed prototyping, wireframing, high-fidelity visual design, and interactive motion logic.</p>
+                            <div class="episode-progress-bar">
+                                <div class="episode-progress" style="width: 94%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section (Netflix Horizontal Carousels with expanding hover cards) -->
+        <section id="portfolio" class="portfolio-section scroll-reveal">
+            <div class="section-container">
+                <div class="section-header-cinematic">
+                    <span class="cinematic-category">BLOCKBUSTER RELEASES</span>
+                    <h2 class="section-title">Featured Works & Projects</h2>
+                    <div class="gold-accent-line"></div>
+                </div>
+
+                <!-- Carousel 1: Popular Releases (Trending Now) -->
+                <div class="carousel-container">
+                    <h3 class="carousel-row-title">Trending Now (Full Stack Blockbusters)</h3>
+                    <div class="carousel-wrapper">
+                        <button class="carousel-arrow left-arrow" aria-label="Slide Left">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="carousel-track" id="trending-track">
+                            <!-- Project Card 1 -->
+                            <div class="project-card">
+                                <div class="project-card-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80');">
+                                    <div class="card-gradient"></div>
+                                    <div class="card-logo">AURA</div>
+                                    <div class="hover-details">
+                                        <div class="hover-icon-row">
+                                            <button class="hover-circle-btn play-proj-btn" data-project="aura" title="Play Project Showreel"><i class="fas fa-play"></i></button>
+                                            <button class="hover-circle-btn git-btn" data-link="https://github.com" title="View Source"><i class="fab fa-github"></i></button>
+                                            <button class="hover-circle-btn link-btn" data-link="https://google.com" title="Live Stream Link"><i class="fas fa-external-link-alt"></i></button>
+                                        </div>
+                                        <div class="hover-meta">
+                                            <span class="match-score">98% Match</span>
+                                            <span class="maturity-rating">PG-13</span>
+                                            <span class="proj-year">2026</span>
+                                        </div>
+                                        <h4 class="hover-proj-title">Aura Analytics</h4>
+                                        <p class="hover-proj-desc">Cinematic enterprise business intelligence platform rendering complex data visualizations in real-time with sub-millisecond response times.</p>
+                                        <div class="hover-tags">
+                                            <span>React</span>
+                                            <span>FastAPI</span>
+                                            <span>D3.js</span>
+                                            <span>Redis</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project Card 2 -->
+                            <div class="project-card">
+                                <div class="project-card-image" style="background-image: url('https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=500&q=80');">
+                                    <div class="card-gradient"></div>
+                                    <div class="card-logo">CHRONOS</div>
+                                    <div class="hover-details">
+                                        <div class="hover-icon-row">
+                                            <button class="hover-circle-btn play-proj-btn" data-project="chronos" title="Play Project Showreel"><i class="fas fa-play"></i></button>
+                                            <button class="hover-circle-btn git-btn" data-link="https://github.com" title="View Source"><i class="fab fa-github"></i></button>
+                                            <button class="hover-circle-btn link-btn" data-link="https://google.com" title="Live Stream Link"><i class="fas fa-external-link-alt"></i></button>
+                                        </div>
+                                        <div class="hover-meta">
+                                            <span class="match-score">95% Match</span>
+                                            <span class="maturity-rating">G</span>
+                                            <span class="proj-year">2025</span>
+                                        </div>
+                                        <h4 class="hover-proj-title">Chronos CMS</h4>
+                                        <p class="hover-proj-desc">Highly customizable cinematic Content Management System featuring instantaneous block layouts and high-speed AWS image pipelines.</p>
+                                        <div class="hover-tags">
+                                            <span>Next.js</span>
+                                            <span>Node.js</span>
+                                            <span>AWS S3</span>
+                                            <span>MongoDB</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project Card 3 -->
+                            <div class="project-card">
+                                <div class="project-card-image" style="background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=500&q=80');">
+                                    <div class="card-gradient"></div>
+                                    <div class="card-logo">NEBULA</div>
+                                    <div class="hover-details">
+                                        <div class="hover-icon-row">
+                                            <button class="hover-circle-btn play-proj-btn" data-project="nebula" title="Play Project Showreel"><i class="fas fa-play"></i></button>
+                                            <button class="hover-circle-btn git-btn" data-link="https://github.com" title="View Source"><i class="fab fa-github"></i></button>
+                                            <button class="hover-circle-btn link-btn" data-link="https://google.com" title="Live Stream Link"><i class="fas fa-external-link-alt"></i></button>
+                                        </div>
+                                        <div class="hover-meta">
+                                            <span class="match-score">97% Match</span>
+                                            <span class="maturity-rating">PG</span>
+                                            <span class="proj-year">2025</span>
+                                        </div>
+                                        <h4 class="hover-proj-title">Nebula Engine</h4>
+                                        <p class="hover-proj-desc">3D immersive particle engine utilizing HTML5 Canvas and WebGL to compose cinematic gravity and black hole effects.</p>
+                                        <div class="hover-tags">
+                                            <span>JavaScript</span>
+                                            <span>WebGL</span>
+                                            <span>Three.js</span>
+                                            <span>CSS3</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project Card 4 -->
+                            <div class="project-card">
+                                <div class="project-card-image" style="background-image: url('https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=500&q=80');">
+                                    <div class="card-gradient"></div>
+                                    <div class="card-logo">VALOR</div>
+                                    <div class="hover-details">
+                                        <div class="hover-icon-row">
+                                            <button class="hover-circle-btn play-proj-btn" data-project="valor" title="Play Project Showreel"><i class="fas fa-play"></i></button>
+                                            <button class="hover-circle-btn git-btn" data-link="https://github.com" title="View Source"><i class="fab fa-github"></i></button>
+                                            <button class="hover-circle-btn link-btn" data-link="https://google.com" title="Live Stream Link"><i class="fas fa-external-link-alt"></i></button>
+                                        </div>
+                                        <div class="hover-meta">
+                                            <span class="match-score">94% Match</span>
+                                            <span class="maturity-rating">18+</span>
+                                            <span class="proj-year">2024</span>
+                                        </div>
+                                        <h4 class="hover-proj-title">Valor eSports</h4>
+                                        <p class="hover-proj-desc">Real-time tournaments and match streaming service for competitive gamers. Integrates sub-second WebSockets updates.</p>
+                                        <div class="hover-tags">
+                                            <span>Vue.js</span>
+                                            <span>WebSockets</span>
+                                            <span>Express</span>
+                                            <span>PostgreSQL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-arrow right-arrow" aria-label="Slide Right">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Carousel 2: Award-Winning Masterpieces (Top Rated) -->
+                <div class="carousel-container row-2">
+                    <h3 class="carousel-row-title">Award-Winning Masterpieces (Acclaimed Tech)</h3>
+                    <div class="carousel-wrapper">
+                        <button class="carousel-arrow left-arrow" aria-label="Slide Left">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="carousel-track" id="acclaimed-track">
+                            <!-- Project Card 5 -->
+                            <div class="project-card">
+                                <div class="project-card-image" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=500&q=80');">
+                                    <div class="card-gradient"></div>
+                                    <div class="card-logo">PULSE</div>
+                                    <div class="hover-details">
+                                        <div class="hover-icon-row">
+                                            <button class="hover-circle-btn play-proj-btn" data-project="pulse" title="Play Project Showreel"><i class="fas fa-play"></i></button>
+                                            <button class="hover-circle-btn git-btn" data-link="https://github.com" title="View Source"><i class="fab fa-github"></i></button>
+                                            <button class="hover-circle-btn link-btn" data-link="https://google.com" title="Live Stream Link"><i class="fas fa-external-link-alt"></i></button>
+                                        </div>
+                                        <div class="hover-meta">
+                                            <span class="match-score">99% Match</span>
+                                            <span class="maturity-rating">PG</span>
+                                            <span class="proj-year">2026</span>
+                                        </div>
+                                        <h4 class="hover-proj-title">Pulse Distributed Database</h4>
+                                        <p class="hover-proj-desc">A highly scalable customized decentralized key-value caching system constructed to handle continuous visual logging events.</p>
+                                        <div class="hover-tags">
+                                            <span>Golang</span>
+                                            <span>Docker</span>
+                                            <span>gRPC</span>
+                                            <span>Raft protocol</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project Card 6 -->
+                            <div class="project-card">
+                                <div class="project-card-image" style="background-image: url('https://images.unsplash.com/photo-1504607798333-52a30db54a5d?auto=format&fit=crop&w=500&q=80');">
+                                    <div class="card-gradient"></div>
+                                    <div class="card-logo">AERIS</div>
+                                    <div class="hover-details">
+                                        <div class="hover-icon-row">
+                                            <button class="hover-circle-btn play-proj-btn" data-project="aeris" title="Play Project Showreel"><i class="fas fa-play"></i></button>
+                                            <button class="hover-circle-btn git-btn" data-link="https://github.com" title="View Source"><i class="fab fa-github"></i></button>
+                                            <button class="hover-circle-btn link-btn" data-link="https://google.com" title="Live Stream Link"><i class="fas fa-external-link-alt"></i></button>
+                                        </div>
+                                        <div class="hover-meta">
+                                            <span class="match-score">93% Match</span>
+                                            <span class="maturity-rating">G</span>
+                                            <span class="proj-year">2024</span>
+                                        </div>
+                                        <h4 class="hover-proj-title">Aeris Weather Hub</h4>
+                                        <p class="hover-proj-desc">Beautiful spatial atmospheric modeling dashboard displaying localized meteorological forecasts and vector layouts.</p>
+                                        <div class="hover-tags">
+                                            <span>React</span>
+                                            <span>Leaflet Map</span>
+                                            <span>OpenWeather API</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project Card 7 -->
+                            <div class="project-card">
+                                <div class="project-card-image" style="background-image: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=500&q=80');">
+                                    <div class="card-gradient"></div>
+                                    <div class="card-logo">CIPHER</div>
+                                    <div class="hover-details">
+                                        <div class="hover-icon-row">
+                                            <button class="hover-circle-btn play-proj-btn" data-project="cipher" title="Play Project Showreel"><i class="fas fa-play"></i></button>
+                                            <button class="hover-circle-btn git-btn" data-link="https://github.com" title="View Source"><i class="fab fa-github"></i></button>
+                                            <button class="hover-circle-btn link-btn" data-link="https://google.com" title="Live Stream Link"><i class="fas fa-external-link-alt"></i></button>
+                                        </div>
+                                        <div class="hover-meta">
+                                            <span class="match-score">96% Match</span>
+                                            <span class="maturity-rating">18+</span>
+                                            <span class="proj-year">2025</span>
+                                        </div>
+                                        <h4 class="hover-proj-title">Cipher Crypt</h4>
+                                        <p class="hover-proj-desc">End-to-end encrypted messaging browser app running local browser cryptography keys. Completely zero-knowledge storage.</p>
+                                        <div class="hover-tags">
+                                            <span>WebCrypto API</span>
+                                            <span>Socket.io</span>
+                                            <span>Next.js</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-arrow right-arrow" aria-label="Slide Right">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section (Netflix Subscription/Sign-Up Layout) -->
+        <section id="contact" class="contact-section scroll-reveal">
+            <div class="contact-background-overlay"></div>
+            <div class="contact-container">
+                <div class="section-header-cinematic centered">
+                    <span class="cinematic-category">READY TO CAST ME?</span>
+                    <h2 class="section-title">Join The Cast & Subscribe</h2>
+                    <div class="gold-accent-line center-line"></div>
+                    <p class="contact-subtitle">Enter your message below to kickstart an epic development production together.</p>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form id="cinematic-contact-form" class="contact-form">
+                        <div class="form-row-grid">
+                            <div class="form-group floating-label-group">
+                                <input type="text" id="contact-name" class="form-input" required placeholder=" ">
+                                <label for="contact-name" class="form-label">Your Name (Producer)</label>
+                                <span class="input-focus-border"></span>
+                            </div>
+                            <div class="form-group floating-label-group">
+                                <input type="email" id="contact-email" class="form-input" required placeholder=" ">
+                                <label for="contact-email" class="form-label">Email Address</label>
+                                <span class="input-focus-border"></span>
+                            </div>
+                        </div>
+                        <div class="form-group floating-label-group">
+                            <input type="text" id="contact-subject" class="form-input" required placeholder=" ">
+                            <label for="contact-subject" class="form-label">Production Subject / Project Role</label>
+                            <span class="input-focus-border"></span>
+                        </div>
+                        <div class="form-group floating-label-group">
+                            <textarea id="contact-message" class="form-input text-area-input" required placeholder=" " rows="5"></textarea>
+                            <label for="contact-message" class="form-label">Project Details / Script Draft</label>
+                            <span class="input-focus-border"></span>
+                        </div>
+                        
+                        <div class="form-btn-container">
+                            <button type="submit" class="btn btn-primary submit-btn">
+                                <span>Get Started (Subscribe)</span>
+                                <i class="fas fa-chevron-right btn-arrow"></i>
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <!-- Form Success/Error Message Overlay -->
+                    <div id="form-feedback" class="form-feedback-overlay hide">
+                        <div class="feedback-content">
+                            <div class="feedback-icon-container">
+                                <i class="fas fa-check-circle animated-check"></i>
+                            </div>
+                            <h3>Transmission Completed!</h3>
+                            <p>Shubham's production team has received your script. We will reach out within 24 business hours to organize the pilot episode.</p>
+                            <button id="close-feedback-btn" class="btn btn-secondary">OK</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cinematic Social Casting Row -->
+                <div class="social-casting">
+                    <h4>Streaming On Sibling Networks:</h4>
+                    <div class="social-links-grid">
+                        <a href="https://github.com" target="_blank" class="social-casting-link" title="GitHub Network">
+                            <i class="fab fa-github"></i>
+                            <span>GITHUB</span>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-casting-link" title="LinkedIn Professional Network">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span>LINKEDIN</span>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="social-casting-link" title="X Network">
+                            <i class="fab fa-twitter"></i>
+                            <span>X / TWITTER</span>
+                        </a>
+                        <a href="mailto:shubham.patel@example.com" class="social-casting-link" title="Direct Mail Transmission">
+                            <i class="fas fa-envelope"></i>
+                            <span>EMAIL</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Netflix Style Dynamic Info / Trailer Modal -->
+    <div id="showreel-modal" class="modal-overlay hide">
+        <div class="modal-window">
+            <div class="modal-close-btn" id="modal-close">
+                <i class="fas fa-times"></i>
+            </div>
+            
+            <div class="modal-media-viewport">
+                <!-- Glowing digital ambient effects inside modal -->
+                <div class="modal-canvas-glow"></div>
+                <canvas id="modal-matrix-canvas" class="modal-matrix-canvas"></canvas>
+                
+                <div class="modal-media-overlay">
+                    <div class="modal-badge-row">
+                        <span class="hero-badge gold-badge">NOW STREAMING SHOWCASE</span>
+                    </div>
+                    <h2 id="modal-media-title" class="modal-media-title">SHUBHAM PATEL</h2>
+                    <p id="modal-media-genre" class="modal-media-genre">GENRE: FULL STACK ENGINEERING & IMMERSIVE VISUALS</p>
+                </div>
+            </div>
+
+            <div class="modal-details-grid">
+                <div class="modal-details-left">
+                    <div class="modal-meta-row">
+                        <span class="meta-match">99% Match</span>
+                        <span class="meta-year">2026</span>
+                        <span class="meta-certification">PG-13</span>
+                        <span class="meta-duration">4K Ultra HD</span>
+                    </div>
+                    <p id="modal-media-desc" class="modal-media-description">
+                        Initializing full code review compilation showreel... This interactive terminal simulation projects code structures, algorithmic sequences, and dynamic layouts mapped by Shubham Patel.
+                    </p>
+                    <div class="interactive-terminal-container">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="terminal-title">shubham-patel-showreel.sh</span>
+                        </div>
+                        <div class="terminal-body" id="terminal-content">
+                            <span class="term-line prompt">shubham@patel-pc:~$ ./play_showreel</span><br>
+                            <span class="term-line success">Initializing digital showcase environment... [OK]</span><br>
+                            <span class="term-line info">Loading UI framework engines... React/Next.js [LOADED]</span><br>
+                            <span class="term-line info">Spawning high-performance microservices... REST API/PostgreSQL [ACTIVE]</span><br>
+                            <span class="term-line warning">Warning: Cinematic overflow of excellence detected.</span><br>
+                            <span class="term-line prompt">shubham@patel-pc:~$ cat shubham_stats.json</span><br>
+                            <span class="term-line code">{ "fullstack": "master", "creativity": "unlimited", "performance": "optimized" }</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-details-right">
+                    <div class="modal-sidebar-info">
+                        <p><strong>Directed By:</strong> Shubham Patel</p>
+                        <p><strong>Cast Stars:</strong> TypeScript, Node.js, Python, CSS3 Grid, WebGL, AWS S3</p>
+                        <p><strong>Awards:</strong> Best Layout Architecture, Outstanding Backend Security, 100% Mobile Response Score</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Netflix Style Footer -->
+    <footer class="cinematic-footer">
+        <div class="footer-socials">
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="mailto:shubham.patel@example.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="footer-links-grid">
+            <ul class="footer-link-col">
+                <li><a href="#hero">Audio Description</a></li>
+                <li><a href="#about">Investor Relations</a></li>
+                <li><a href="#skills">Legal Notices</a></li>
+            </ul>
+            <ul class="footer-link-col">
+                <li><a href="#skills">Help Center</a></li>
+                <li><a href="#portfolio">Jobs / Casting</a></li>
+                <li><a href="#contact">Privacy Policy</a></li>
+            </ul>
+            <ul class="footer-link-col">
+                <li><a href="#portfolio">Media Center</a></li>
+                <li><a href="#contact">Terms of Use</a></li>
+                <li><a href="#about">Corporate Information</a></li>
+            </ul>
+            <ul class="footer-link-col">
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#hero">Service Codes</a></li>
+                <li><a href="#skills">Release Calendars</a></li>
+            </ul>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2026 Shubham Patel Productions. All digital distribution rights reserved.</p>
+            <p class="footer-tagline">Designed with premium cinematic precision. Made for modern streaming.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

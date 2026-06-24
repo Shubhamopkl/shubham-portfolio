@@ -916,7 +916,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
             
             try {
-                const response = await fetch('/api/contact', {
+                const response = await fetch('https://formspree.io/f/mjgqgprw', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(formData)
